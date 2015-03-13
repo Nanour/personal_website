@@ -1,0 +1,2 @@
+[04-Jan-2015 21:03:29 America/Denver] PHP Parse error:  syntax error, unexpected '$email' (T_VARIABLE) in /home5/ruonanzh/public_html/php/email.php on line 11
+[04-Jan-2015 21:11:58 America/Denver] PHP Parse error:  syntax error, unexpected 'mail' (T_STRING) in /home5/ruonanzh/public_html/php/email.php on line 17

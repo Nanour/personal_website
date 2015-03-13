@@ -1,0 +1,16 @@
+{
+  "nodes":[
+    {"name":"Cravatte","group":1, "value":67},
+    {"name":"OldMan","group":1, "value":98},
+    {"name":"Favourite","group":3, "value":83},
+    {"name":"Pontmercy","group":4, "value":61},
+    {"name":"Gribier","group":0, "value":64},
+    {"name":"Mlle.Vaubois","group":5, "value":55},
+    {"name":"Joly","group":8, "value":71},
+    {"name":"Child1","group":10, "value":85},
+    {"name":"Child2","group":10, "value":95}
+  ],
+  "links":[
+    {"source":8,"target":7,"value":3}
+  ]
+}

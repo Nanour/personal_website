@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Timeless   
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20110825
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ruonan Zhang</title>
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#">Ruonan Zhang </a></h1>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../aboutme.html">AboutMe</a>
+
+			</li>
+			<li><a href="../work.html">Work ➹</a>
+				<ul>
+					<li><a href="../programming.html">Programming</a></li>
+					<li><a href="../design.html">Game</a></li>
+					<li><a href="../statistics.html">Statistics</a></li>
+					<li><a href="../others.html">Others</a></li>
+				</ul>
+			</li>
+			<li><a href="../contact.html">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<h2 class="title">OpenGL single game(C, OpenGL)</h2>
+						<p class="meta"></p>
+						<div class="entry">
+							<p><h3>2D maze game</h3>
+							 <br/>Based on <a href = "http://staff.psc.edu/awetzel/gr_2014asn1t.c">code.</a>
+							</p>
+							<p>
+								<img class = "maze" src = "../images/maze1.png"/>
+								<img class = "maze" src = "../images/maze2.png"/>
+								<img class = "maze" src = "../images/maze3.png"/>
+								<img class = "maze" src = "../images/maze4.png"/>
+							</p>
+							<br/>
+							<br/>
+							<p><h3>3D Ball game</h3>
+							 <br/>Based on <a href = "http://staff.psc.edu/awetzel/gr_asn6_2014t.c">code.</a>
+							</p>
+							<p>
+								E: Stop<br/>
+								W: Forward<br/>
+								S: Backword<br/>
+								A: Left<br/>
+								D: Right<br/>
+								<- : Turn Left<br/>
+								-> : Turn Right<br/>
+								There are two kinds of balls, blue and pink. The character(which is also a ball) you can control is a smaller pink ball. Use 'w','s','a','d' to control the character, and use GLUT_KEY_RIGHT and GLUT_KEY_RIGHT to steer. The pink balls are targets, when you hit the ball, it will disappear, and you will get one score. The blue balls are 'walls' that you cannot pass across. When you hit blue balls, you will see you go back. The game is over when you find all target pink balls, and it will exit. I have used bounding volume to detect the collision(blue balls), and for the steer function(use GLUT_KEY_RIGHT and GLUT_KET_LEFT), I translate the ordinate. 
+								<br/>
+								<img class = "game" src = "../images/game1.png"/>
+								<br/>
+								<img class = "game" src = "../images/game2.png"/>
+								<br/>
+								The game was shown in perspective projection. On top left, an orthographic projection map was created. 
+								<br/>
+								<img class = "game" src = "../images/game3.png"/><br/>
+								<img class = "game" src = "../images/game4.png"/><br/>
+								<img class = "game" src = "../images/game5.png"/>
+							</p>
+						</div>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+</div>
+<div style="clear: both;">&nbsp;</div>
+<!-- end #footer -->
+</body>
+</html>

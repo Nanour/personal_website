@@ -1,0 +1,360 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF url(images/pattern.png) repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #402C16;
+}
+
+h1, h2, h3{
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: #2E9F13;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 2.4em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+ul, ol {
+}
+
+a {
+	text-decoration: none;
+	color: #2E9F13;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+img.border {
+	border: 6px solid #EEE7DF;
+}
+
+img.alignleft {
+	float: left;
+	margin-right: 25px;
+}
+
+img.alignright {
+	float: right;
+}
+
+img.aligncenter {
+	margin: 0px auto;
+}
+
+
+/* Header */
+
+#header-wrapper {
+	height: 120px;
+}
+
+#header {
+	width: 960px;
+	height: 120px;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	height: 120px;
+	margin: 0;
+	padding: 0px;
+	color: #1A1A1A;
+}
+
+#logo h1, #logo p {
+	margin: 0;
+	padding: 0;
+}
+
+#logo h1 {
+	float: left;
+	padding-top: 60px;
+	padding-left: 50px;
+	letter-spacing: -1px;
+	font-family: Verdana, Arial, Sans-serif;
+	font-size: 36px;
+	color: #1A1A1A;
+}
+
+#logo a {
+	border: none;
+	background: none;
+	text-decoration: none;
+	color: #1A1A1A;
+}
+
+/* Menu */
+
+#menu {
+	width: 1000px;
+	height: 40px;
+	margin: 0 auto;
+	padding: 0;
+	border-top: 1px solid #D0D0D0;
+	background-color: #140E13;
+	z-index: 50;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px 0px 0px 4px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	float: left;
+}
+
+#menu a {
+	display: block;
+	margin-right: 1px;
+	height: 18px;
+	padding: 14px 20px 10px 20px;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+#menu a:hover {
+	background-color: #BBBBBB;
+}
+
+/* drop-down */
+#menu ul li {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#menu ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+
+
+#menu ul li ul{
+	background: #140E13; 
+  	display: block; 
+  	color: #fff;
+}
+
+#menu ul li:hover ul {
+  	display: block;
+  	opacity: 1;
+  	visibility: visible;
+}
+
+#menu ul li ul li:hover { background: #BBBBBB; }
+
+
+#menu ul li ul li a {
+	display: block;
+	margin-right: 1px;
+	height: 14px;
+	padding: 14px 20px 10px 25px;
+	width: 100px;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+/* Page */
+
+#page {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+	border-top: 1px solid #D0D0D0;
+}
+
+#page-bgtop {
+}
+
+#page-bgbtm {
+	margin: 0px;
+	padding: 15px 30px 0px 30px;
+	background-color: #FFFFFE;
+}
+
+/* Content */
+
+#content {
+	width: 900px;
+	padding: 0px 0px 0px 0px;
+	margin-top: 20px;
+}
+
+.post {
+	clear: both;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.post .title {
+	padding-top: 10px;
+	letter-spacing: -1px;
+	border-top: 1px solid #D0D0D0;
+	color: #1A1A1A;
+}
+
+.post .title a {
+	
+	border: none;
+}
+
+.post .meta {
+	padding-bottom: 10px;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	border-bottom: 1px solid #D0D0D0;
+}
+
+.post .meta a {
+}
+
+.post .entry {
+	text-align: justify;
+	margin-bottom: 25px;
+	padding: 10px 0px 0px 0px;
+}
+
+
+.links {
+	display: block;
+	width: 96px;
+	padding: 2px 0px 2px 0px;
+	background: #A53602;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+
+.work img{
+	padding-top: 2px;
+	padding-right: 5px;
+	height: 15px;
+	width: 15px;
+}
+
+.gomoku, .rsales, .ppwp, .rcenter, .cn3, .map{
+	width: 850px;
+}
+
+.tetris, .other{
+	width: 700px;
+}
+
+.tetris1, .maze{
+	width: 180px;
+}
+
+.ppwpapp{
+	width: 220px;
+}
+
+.dm, .game{
+	width: 450px;
+}
+
+.input{
+	-moz-border-radius: 5px;
+ 	-webkit-border-radius: 5px;
+  	border-radius: 5px;
+  	border: 1px solid #ccc;
+}
+
+.item{
+	margin-bottom: 50px;
+	padding-bottom: 120px;
+}
+
+.sample_image{
+	padding-top: 5px;
+	padding-right: 10px;
+	position: relative;
+	width: 20%;
+	float: left;
+}
+
+.sample_description{
+	position: relative;
+	width: 78%;
+	float: right;
+}
+
+
+/* Footer */
+
+#footer {
+	width: 960px;
+	height: 55px;
+	margin: 0px auto 40px auto;
+	border-top: 1px solid #D0D0D0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 18px;
+	line-height: normal;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #676767;
+}
+
+#footer a {
+	color: #676767;
+}

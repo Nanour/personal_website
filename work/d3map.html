@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Timeless   
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20110825
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ruonan Zhang</title>
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#">Ruonan Zhang </a></h1>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../aboutme.html">AboutMe</a>
+
+			</li>
+			<li><a href="../work.html">Work ➹</a>
+				<ul>
+					<li><a href="../programming.html">Programming</a></li>
+					<li><a href="../design.html">Game</a></li>
+					<li><a href="../statistics.html">Statistics</a></li>
+					<li><a href="../others.html">Others</a></li>
+				</ul>
+			</li>
+			<li><a href="../contact.html">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<h2 class="title">Information Visualization with D3</h2>
+						<p class="meta"></p>
+						<div class="entry">
+							<p>Design and generate proper information visualization according to requirements. In case one, time-series plot, bar charts and maps have been generated to illustrate information. In case two, link-node graphs and matrix have been designed and generated to demostrate relations between information. All the graphs are implemented with D3. 
+							</p>
+							<h3>Case 1: Education 
+							</h3>
+							<p>
+								Generate visualizations to compare the Educational data by states, by categories, and by time.
+							</p>
+							<p>
+								Original data can be found <a href = "http://www.census.gov/compendia/statab/cats/education/educational_attainment.html">here</a>. 
+
+							</p>
+							<br/>
+							<p>Compare data across categories and over time</p>
+							<p>
+								<a href="d3/Q1/Q1_index.html">Demo</a>
+								<br/>
+								<img class= "map" src="../images/Q1.png"/>
+								<br/>
+								<img class= "map" src="../images/Q1_1.png"/>
+							</p>
+							<br/>
+							<p>Compare data across states and categories</p>
+							<p>
+								<a href="d3/Q2/2B.html">Demo1</a>
+								<br/>
+								<a href="d3/Q2/2B_2.html">Demo2</a>
+								<br/>
+								<img class= "map" class= "map"src="../images/Q2.png"/>
+								<br/>
+								<img class= "map" src="../images/Q2_2.png"/>
+							</p>
+							<br/>
+							<p> Design and generate a visualization to show how the data change between 2000 and 2009, across states and categories.</p>
+							<p>
+								<a href="d3/Q3/advmap.html">D3 Map Demo: Advanced Degree or More</a>
+								<br/>
+								<a href="d3/Q3/bachmap.html">D3 Map Demo: Bachelor Degree or More</a>
+								<br/>
+								<a href="d3/Q3/highmap.html">D3 Map Demo: High School or More</a>
+								<br/>
+								<img class= "map" src="../images/Q3.png"/>
+								<br/>
+								<img class= "map" src="../images/Q3_1.png"/>
+								<br/>
+								<img class= "map" src="../images/Q3_2.png"/>
+							</p>
+
+							<h3>Case 2: Les Miserables Roles 
+							</h3>
+							<p><a href="d3_2/InfoVisHw2/q1/a1.html">Node-link demo.</a><br/>
+							</p>
+							<p>
+								Generate Node-link Visualization fro Les Miserables Roles.
+							</p>
+							<p>
+								In this visualization we want to show the importance of each role, the grouping of the roles, the relationship among the roles, and also the strength of the relationships in Les Miserables. A solid circle node represents a role. The radius length of a circle is decided by the importance of a role, that is the node value. Different colors are used to distinguish different groups. A link line between two nodes displays the relationship between two roles, and the width of a link line shows the strength of relationship between two roles.
+								<br/>
+								<img class = "map" src = "../images/A2_1.png"/>
+							</p>
+							<p>
+								In Figure 2, we type 100 in the textbox and then click on Draw button. Only nodes with value > 100 are left in the new generated graph.
+								<br/>
+								<img class = "map" src = "../images/A2_2.png"/>
+							</p>
+							<p><a href="d3_2/InfoVisHw2/q2/all.html">Matrix Graph for Les Miserables Roles demo.</a><br/>	
+							</p>
+							<p>
+								Generate Matrix Graph for Les Miserables Roles
+							</p>
+							<p>
+								Instead of using node-link diagram, explore different options and generate a visualization to show the structure of the same network. The visualization can include multiple charts or mix different types of charts. We use a matrix to present the relationship between roles (fig b_1). Both x-axis and y-axis represent all the role-list. The default sorting way is by name to sort, users can see different sorting ways by choosing the dropdown list on the right side of the page. The option “by Frequency” is sorting by the link value between two nodes (fig b_2).
+								<br/>
+								<img class = "map" src = "../images/A2_3.png"/>
+								<br/>
+								<img class = "map" src = "../images/A2_4.png"/>
+							</p>
+							<p>
+								When your mouse moves on the grid which is colored, the color of the corresponding two characters on x-axis and y-axis will become red to differentiate from others (fig b_4).
+								<br/>
+								<img class = "map" src = "../images/A2_5.png"/>
+								<br/>
+								Show the label with the name and value of the node if users’ mouse moves to the character (fig b_5).
+								<br/>
+								<img class = "map" src = "../images/A2_6.png"/>
+							</p>
+							<p>
+								Following are six different diagrams and these categorize by groupone (fig b_6), group two (fig b_7), group three (fig b_8), group four (fig b_9), group five (fig b_10), and group eight (fig b_11).
+								<br/>
+								<img class = "map" src = "../images/A2_7.png"/>
+								<br/>
+								<img class = "map" src = "../images/A2_8.png"/>
+								<br/>
+								<img class = "map" src = "../images/A2_9.png"/>
+								<br/>
+								<img class = "map" src = "../images/A2_10.png"/>
+								<br/>
+								<img class = "map" src = "../images/A2_11.png"/>
+								<br/>
+								<img class = "map" src = "../images/A2_12.png"/>
+							</p>
+							<p>
+								Due to the bigger node value means the character is more important in this novel, we generated three more diagrams to see the relation between those more important characters. Followings are the diagrams, which generated by the node value greater than 100 (fig b_12), the node value greater than 50 (fig b_13), and the node value between 50 to 100 (fig b_14).
+								<br/>
+								<img class = "map" src = "../images/A2_13.png"/>
+								<br/>
+								<img class = "map" src = "../images/A2_14.png"/>
+								<br/>
+								<img class = "map" src = "../images/A2_15.png"/>
+							</p>
+						</div>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+</div>
+<div style="clear: both;">&nbsp;</div>
+<!-- end #footer -->
+</body>
+</html>

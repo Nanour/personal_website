@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Data Visualization from Titanic</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            body{
+                font-family:Arial;
+                background:#fff url(images/bg.png) no-repeat top left;
+            }
+            .title{
+                width:548px;
+                height:119px;
+                position:absolute;
+                top:400px;
+                left:150px;
+            }
+            #content{
+                margin:0 auto;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div id= "projname">
+            <h3>Data Visualization from Titanic:</h3>
+            <h5>Machine Learning from Disaster</h5>
+        </div>
+        <div id="content">
+            <div class="title"></div>
+
+            <div class="navigation" id="nav">
+                <div class="item visualization">
+                    <img src="images/bg_visualization.png" alt="" width="199" height="199" class="circle"/>
+                    <h2>Visualiztion</h2>
+                    <ul>
+                        <li><a href="../visualization/passengerinfo.html">Show Results</a></li>
+                    </ul>
+                </div>
+                <div class="item prediction">
+                    <img src="images/bg_prediction.png" alt="" width="199" height="199" class="circle"/>
+                    <h2>Prediction</h2>
+                    <ul>
+                        <li><a href="../prediction/prediction.html">Play Game</a></li>
+                    </ul>
+                </div>
+                <div class="item data">
+                    <img src="images/bg_data.png" alt="" width="199" height="199" class="circle"/>
+                    <h2>Data</h2>
+                    <ul>
+                        <li><a href="../data/cleandata.html">Clean Data</a></li>
+                    </ul>
+                </div>
+                <div class="item presentation">
+                    <img src="images/bg_presentation.png" alt="" width="199" height="199" class="circle"/>
+                    <h2>Presentation</h2>
+                    <ul>
+                        <li><a href="../presentation/presentation.html">Slides</a></li>
+                    </ul>
+                </div>
+                <div class="item member">
+                    <img src="images/bg_member.png" alt="" width="199" height="199" class="circle"/>
+                    <h2>Member</h2>
+                    <ul>
+                        <li><a href="../member/member.html">Group Member</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#nav > div').hover(
+                function () {
+                    var $this = $(this);
+                    $this.find('img').stop().animate({
+                        'width'     :'199px',
+                        'height'    :'199px',
+                        'top'       :'-25px',
+                        'left'      :'-25px',
+                        'opacity'   :'1.0'
+                    },500,'easeOutBack',function(){
+                        $(this).parent().find('ul').fadeIn(700);
+                    });
+
+                    $this.find('a:first,h2').addClass('active');
+                },
+                function () {
+                    var $this = $(this);
+                    $this.find('ul').fadeOut(500);
+                    $this.find('img').stop().animate({
+                        'width'     :'52px',
+                        'height'    :'52px',
+                        'top'       :'0px',
+                        'left'      :'0px',
+                        'opacity'   :'0.1'
+                    },5000,'easeOutBack');
+
+                    $this.find('a:first,h2').removeClass('active');
+                }
+            );
+            });
+        </script>
+    </body>
+</html>

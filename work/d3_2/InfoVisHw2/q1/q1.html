@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.link {
+  stroke: #ccc;
+}
+
+.node text {
+  pointer-events: none;
+  font: 10px sans-serif;
+}
+
+</style>
+<body>
+<p>
+    <b>Credits:</b><br/>
+    <a href="http://bl.ocks.org/mbostock/950642">Q1 Solution is built based on mbostock’s block #950642, a Labeled Force Layout, developed and provided by bl.ocks.org</a><br/>
+    <a href="http://bl.ocks.org/">bl.ocks.org</a> is run by <a href="http://bost.ocks.org/mike/">Mike Bostock</a>.
+</p>
+<p>
+    <b>Q1 Solution:</b><br/>
+    threshold for node value: 0 - 256 &nbsp;(0 means no threshold)
+</p>
+<input id="data" type="text" value="0" name="enter" class="enter" />
+<input type="button" value="Draw" onClick="draw()" />
+<div class="fig" />
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+
+function draw(){
+
+d3.select("svg").remove();
+// $("svg#div.fig").empty();
+// $("svg#div.fig").remove();
+var nodesValue = document.getElementById('data').value;
+// console.log(nodesValue);
+
+
+
+var width = 960,
+    height = 600;
+
+var fill = d3.scale.category20();
+
+var svg = d3.select("div.fig").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var force = d3.layout.force()
+    .gravity(.05)
+    .distance(100)
+    .charge(-100)
+    .size([width, height]);
+
+d3.json("graph.json", function(error, json) {
+ 
+//   filterJson(json, "value", 100);
+//   
+//   function filterJson(json, key, value){
+//   	var result = {};
+//   	for (var i in json["nodes"]){
+// //   			console.log(json["nodes"][i]["name"]);
+// 		if (json["nodes"][i]["value"]>100){
+// 			result["nodes"][i]["name"]= json["nodes"][i]["name"];
+// 			result["nodes"][i]["group"]=json["nodes"][i]["group"];
+// 			result["nodes"][i]["value"]=json["nodes"][i]["value"];
+// 			result["links"][i]["group"]=json["nodes"][i]["group"];
+// 		}
+//   	}
+//   };
+  	
+  	
+// console.log(json.links[0]['source']);
+
+  force
+      .nodes(json.nodes)
+      .links(json.links)
+      .start();
+
+  var link = svg.selectAll(".link")
+      .data(json.links)
+    .enter().append("line")
+      .attr("class", "link");
+
+  var node = svg.selectAll(".node")
+      .data(json.nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .call(force.drag);
+
+  node.append("circle")
+      .attr("class", "node")
+      .attr("r", function(d) {
+      
+      if(d.value > nodesValue)
+      	return Math.sqrt(d.value)+2;
+      else
+      	return 0;
+      
+      })
+      .style("fill", function(d) { return fill(d.group); });
+
+  node.append("text")
+      .attr("dx", 12)
+      .attr("dy", ".35em")
+      .text(function(d) { 
+      
+      if (d.value > nodesValue)
+      	return d.name });
+// console.log("hello");
+
+  force.on("tick", function() { 
+    link.attr("x1", function(d) { 
+//         console.log(d.source);
+//     	console.log("1");
+    	return d.source.x; 
+    	 })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; })
+        .attr('stroke-width',function(d) {
+        
+//         console.log(d.source['name']);
+		if (d.source['value'] > nodesValue && d.target['value'] > nodesValue)
+        	return Math.log(d.value)+1;
+        else
+        	return 0
+        
+        });
+
+    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  });
+});
+
+}
+
+</script>
+
+
+</body>

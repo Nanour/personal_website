@@ -1,0 +1,25 @@
+{
+  "nodes":[
+    {"name":"Napoleon","group":1, "value":150},         
+    {"name":"Valjean","group":2, "value":256},          
+    {"name":"Fantine","group":3, "value":101},          
+    {"name":"Cosette","group":5, "value":165},          
+    {"name":"Javert","group":4, "value":183},           
+    {"name":"Eponine","group":4, "value":177},          
+    {"name":"Gavroche","group":8, "value":191},         
+    {"name":"Marius","group":8, "value":144}           
+  ],
+  "links":[
+    {"source":2,"target":1,"value":9},
+    {"source":3,"target":1,"value":31},
+    {"source":4,"target":1,"value":17},
+    {"source":4,"target":2,"value":5},
+    {"source":4,"target":3,"value":1},
+    {"source":6,"target":4,"value":1},
+    {"source":6,"target":1,"value":1},
+    {"source":7,"target":3,"value":21},
+    {"source":7,"target":1,"value":19},
+    {"source":7,"target":5,"value":5},
+    {"source":7,"target":6,"value":4}
+  ]
+}

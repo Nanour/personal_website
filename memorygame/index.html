@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<title>MemoryGame-RuonanZhang</title>
+<meta charset = "utf-8"/>
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen" /> 
+<script type="text/javascript" src="js/main.js">
+</script>
+</head>
+<body>
+    <header>
+        <section id = "title">
+            <h1>Memory Game</h1>
+            <p>Ruonan Zhang</p>
+        </section>
+    </header>
+    <section id = "content">
+        <section id = "ready">
+            <h1>Memory Game</h1>
+            <p>enter a nick name first!</p>
+            <table>
+                <tr>
+                    <td>Name: </td>
+                    <td><input type = "text" name = "username" id = "username" oninput="btn()"/></td>
+                    <td><button name = "play" id = "play" onclick = "init()" disabled>play the game</button></td>
+                </tr>
+            </table>
+            <p>click on two cards to make a match</p>
+        </section> 
+        <canvas id="canvas" width="550" height="800">
+        Your browser doesn't support the HTML5 element canvas.
+        </canvas> 
+        <section id = "userinfo">
+            <h1>name:</h1>
+            <h1>record:</h1>
+        </section>
+    </section>
+    <footer>
+        <p>Created by Ruonan Zhang on Mar.14, 2014</p>
+        <p>
+            <a href="http://www.st256014.dreamhosters.com/assignment2/html5/index.html">
+            <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+            </a>
+        </p>    
+    </footer>
+</body>
+</html>

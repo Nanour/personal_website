@@ -1,0 +1,41 @@
+{
+  "nodes":[
+    {"name":"Napoleon","group":1, "value":150},
+    {"name":"Cravatte","group":1, "value":67},
+    {"name":"OldMan","group":1, "value":98},
+    {"name":"Valjean","group":2, "value":256},
+    {"name":"Favourite","group":3, "value":83},
+    {"name":"Fantine","group":3, "value":101},
+    {"name":"Cosette","group":5, "value":165},
+    {"name":"Javert","group":4, "value":183},
+    {"name":"Pontmercy","group":4, "value":61},
+    {"name":"Eponine","group":4, "value":177},
+    {"name":"Gribier","group":0, "value":64},
+    {"name":"Gavroche","group":8, "value":191},
+    {"name":"Mlle.Vaubois","group":5, "value":55},
+    {"name":"Marius","group":8, "value":144},
+    {"name":"Joly","group":8, "value":71},
+    {"name":"Child1","group":10, "value":85},
+    {"name":"Child2","group":10, "value":95}
+  ],
+  "links":[
+    {"source":5,"target":4,"value":4},
+    {"source":5,"target":3,"value":9},
+    {"source":6,"target":3,"value":31},
+    {"source":7,"target":3,"value":17},
+    {"source":7,"target":3,"value":5},
+    {"source":7,"target":6,"value":1},
+    {"source":11,"target":7,"value":1},
+    {"source":11,"target":3,"value":1},
+    {"source":13,"target":8,"value":1},
+    {"source":13,"target":6,"value":21},
+    {"source":13,"target":3,"value":19},
+    {"source":13,"target":9,"value":5},
+    {"source":13,"target":11,"value":4},
+    {"source":14,"target":11,"value":3},
+    {"source":14,"target":13,"value":2},
+    {"source":15,"target":11,"value":2},
+    {"source":16,"target":11,"value":2},
+    {"source":16,"target":15,"value":3}
+  ]
+}

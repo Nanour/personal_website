@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 14px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+</style>
+<body>
+
+<h1 style="padding-left:60px;"> U.S. Educational Attainment</h1>
+<a style="padding-left:40px;" href="Q1_index.html">U.S. Educational Attainment</a>
+<a style="padding-left:40px;" href="Q1_difference.html">Year Difference</a>
+<a style="padding-left:40px;" href="Q1_HighSchool.html">High School Attainment</a>
+<a style="padding-left:40px;" href="Q1_Bachelor.html">Bachelor Attainment</a>
+<a style="padding-left:40px;" href="Q1_Advanced.html">Advenced Attainment</a>
+<br/><br/>
+<div class="fig1">
+
+</div>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="lib/jquery.js"></script>
+<script src="lib/bootstrap.js"></script>
+<script>
+
+var margin = {top: 20, right: 55, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], 1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var color = d3.scale.category10();
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line = d3.svg.line()
+    .interpolate("cardinal")
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.Population); });
+
+var svg = d3.select("div.fig1").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.tsv("Q1.tsv", function(error, data) {
+  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Year"; }));
+
+
+  var categories = color.domain().map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+        return {Year: d.Year, Population: +d[name]};
+      })
+    };
+  });
+
+  x.domain(data.map(function(d) { return d.Year; }));
+
+  y.domain([
+    0,
+    d3.max(categories, function(c) { return d3.max(c.values, function(v) { return v.Population; }); })
+  ]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Population  %");
+
+  var category = svg.selectAll(".category")
+      .data(categories)
+    .enter().append("g")
+      .attr("class", "category");
+
+  category.append("path")
+      .attr("class", "line")
+      .attr("d", function(d) { return line(d.values); })
+      .style("stroke", function(d) { return color(d.name); })
+      .style("stroke-width", "4px")
+
+  category.selectAll(".point")
+          .data(function(d) { return d.values; })
+          .enter().append("circle")
+           .attr("class", "point")
+           .attr("cx", function(d) { return x(d.Year) })
+           .attr("cy", function(d) { return y(d.Population); })
+           .attr("r", "5px")
+           .style("fill", function(d) { return color(d.name); })
+           .style("stroke", "grey")
+           .style("stroke-width", "3px")
+           .on("mouseover", function(d) { showPopover.call(this, d); })
+           .on("mouseout",  function(d) { removePopovers(); });
+
+
+  category.append("text")
+      .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
+      .attr("transform", function(d) { return "translate(" + x(d.value.Year) + "," + y(d.value.Population) + ")"; })
+      .attr("x", 3)
+      .attr("dy", ".35em")
+      .text(function(d) { return d.name; });
+
+  function removePopovers () {
+          $('.popover').each(function() {
+            $(this).remove();
+          }); 
+        }
+
+  function showPopover (d) {
+          $(this).popover({
+            title: d.name,
+            container: 'body',
+            trigger: 'manual',
+            html : true,
+            content: function() { 
+              return "Year: " + d.Year + 
+                     "<br/>Population: " + d.Population +"%" }
+          });
+          $(this).popover('show')
+        }
+
+});
+
+</script>

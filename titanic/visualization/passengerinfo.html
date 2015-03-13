@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="passengerinfo.css" rel="stylesheet" type="text/css" media="screen" />
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+  <!-- for slider -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="js/simple-slider.js"></script>
+  <link href="css/simple-slider.css" rel="stylesheet" type="text/css" />
+  <link href="css/simple-slider-volume.css" rel="stylesheet" type="text/css" />  
+  <!-- These styles are only used for this page, not required for the slider -->
+  <style>
+  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  [class^=slider] { display: inline-block; margin-bottom: 30px; }
+  .output { color: #888; font-size: 14px; padding-top: 1px; margin-left: 5px; vertical-align: top;}
+  h1 { font-size: 20px; }
+  h2 { clear: both; margin: 0; margin-bottom: 5px; font-size: 16px; }
+  p { font-size: 15px; margin-bottom: 30px; }
+  h2:first-of-type { margin-top: 0; }
+  </style>
+</head>
+<body>
+
+  <div id = "circle">
+    <svg height="100" width="100">
+      <circle cx="50" cy="50" r="40" stroke="red" stroke-width="2"/> 
+    </svg> 
+  </div>
+  <div id = "ocean">
+    <svg id="svg8840" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="1200px" width="1600px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+     <metadata id="metadata8845">
+      <rdf:RDF>
+       <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+       </cc:Work>
+      </rdf:RDF>
+     </metadata>
+     <g id="layer1" transform="matrix(1,0,0,1.475263,0,-235.81247)">
+      <path id="path9393" opacity="0.28333333" d="M6.0728,773.14c-1.1723-113.2-2.9861-214.79-4.0306-225.76l-1.8992-19.95h78.533c56.046,0,96.54-1.5995,141.42-5.586,87.69-7.7895,140.87-7.3585,203.37,1.6486,141.07,20.33,149.65,20.226,327.17-3.9816,109.59-14.944,137.1-17.186,209.83-17.101,70.719,0.0828,61.441-0.82057,162.63,15.834,120.52,19.836,162.49,19.226,297.3-4.3195,33.989-5.9365,73.071-12.167,86.85-13.846,26.781-3.2628,85.103-5.1961,87.924-2.9145,1.4323,1.1588-7.4485,471.26-8.9208,472.2-0.2764,0.178-325.94,1.7262-723.7,3.4406-397.76,1.7146-752.7,3.7955-788.77,4.6245l-65.568,1.5072-2.1315-205.81z" fill-opacity="0.96888888" stroke="#25c0fc" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="6.06335497" fill="#009ef8"/>
+     </g>
+    </svg>
+  </div>
+
+  <div id = "shiparea">
+<svg id="svg3045" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="1200px" width="1600px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata3050">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="ship" transform="matrix(1,0,0,1.1035275,0,-28.166996),translate(76,-83),rotate(30,600,350)">
+  <g id="g4074">
+   <path id="path3340" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="M102.36,890.87c-14.771-144.61-18.568-306.33-72.13-431.44,437.95,20.043,987.91,4.1011,1449.4-4.358,5.1078,174.77-70.356,317.97-121.58,435.8-418.11-7.5585-853.97,9.3392-1255.7,0z" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.50734389px" fill="#000"/>
+   <path id="path3348" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m150.57,448.54,105.36,0c2.394-6.4453,0-11.161,0-13.268,329.96,8.3019,676.87-7.2938,1006.1-4.9755-2.0022,4.2683-0.526,8.8663-0.7876,13.276,31.164-3.7578,70.103,0,94.655,0-2.1431-6.9128-1.9643-20.224-2.0577-21.186,44.467,4.286,87.453,0,129.97,0-3.9694,15.704-2.9334,33.542-4.1925,47.939" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.30886185px" fill="#ececec"/>
+   <path id="path3350" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m93.533,790.64c385.43,37.69,899.39,18.89,1302.8,15.25" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.5179441px" fill="none"/>
+   <path id="path3352" opacity="0.98000004" fill="#A00" d="m176.52,890.9c-38.006-0.42747-69.907-1.6154-70.893-2.64-1.7423-1.811-10.972-93.597-9.5517-94.985,0.39111-0.38237,9.201,0.11972,19.578,1.1158,78.796,7.5639,200.09,14.254,312.35,17.228,207.02,5.4826,384.41,5.0413,833.13-2.0724,71.987-1.1412,131.03-1.8499,131.2-1.5747,0.176,0.27519-7.6072,18.238-17.297,39.919l-17.617,39.418-380.86,1.439c-209.48,0.79146-459.62,1.7748-555.9,2.1852-96.271,0.41042-206.13,0.39644-244.13-0.031z"/>
+   <path id="path3354" opacity="0.98000004" fill="#000" d="M471.12,811.59c-156.61-3.43-372.49-16.13-376.12-22.11-0.714-1.18-1.931-10.63-2.702-21-8.511-114.49-29.05-226.94-52.584-287.88-3.9191-10.151-6.766-18.83-6.3265-19.288,0.43957-0.45692,44.018,0.79741,96.84,2.7874,141.37,5.3259,457.43,6.8092,715.48,3.3575,206.13-2.7569,458.51-1.2476,595.12,3.5591l38.556,1.3566-1.4067,25.873c-4.7248,86.902-23.802,162.45-68.766,272.32l-14.806,36.178-114.51,1.5269c-62.978,0.83979-175.83,2.4321-250.76,3.5384-155.42,2.2944-448.7,2.1813-558.02-0.21506v-0.00011z"/>
+   <path id="path3855" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m1000.9,196.19c107.53-3.5697,219.64-16.348,319.76-24.388,41.27,87.713,97.295,194.83,127.47,252.75" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.54758823px" fill="none"/>
+   <path id="path3859" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m1303.2,97.748c58.8,106.5,103.3,228.53,146.7,328.96" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.58889091px" fill="none"/>
+   <path id="path3863" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m1462.9,422.9c3.5843,0.64584,2.8343-36.691,4.1925-54.276-11.694-7.7892-28.22-7.9418-33.54-9.4392,5.8496,7.0189,9.9935,18,10.481,18.878-10.147,4.0071-11.88,6.6869-16.77,9.4392,11.4,0.37867,35.309,2.2083,37.733,2.3599" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.57270193px" fill="#F00"/>
+   <path id="path3344" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m28.993,459.43-2.0962-21.79,123.68,0" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.51125205px" fill="#ececec"/>
+   <path id="path3356" opacity="0.98000004" fill="#ececec" d="m284.97,465.35c-78.11-1.614-238.42-6.6405-239.42-7.5067-0.24183-0.21145,20.512-4.1047,46.118-8.6516s49.151-8.7945,52.321-9.4394c5.034-1.0236,5.7647-0.49174,5.7647,4.1962v5.3684l70.749,1.3139c38.911,0.72265,210.82,3.5774,382.04,6.3438,171.62,2.7728,300.47,5.6405,287.19,6.3907-40.318,2.2759-515.24,3.8344-604.77,1.9845z"/>
+   <path id="path3358" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m239.52,404.65c2.1091,5.7612-0.92187,37.731-1.0217,41.816" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.15544498px" fill="none"/>
+   <path id="path3360" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m240.05,402.78c341.01-7.1693,699.98-0.32785,1036.2-5.0824" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="0.94350904px" fill="none"/>
+   <path id="path3362" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m1272.1,398.45c-0.9856-2.8576,1.1206,24.853,2.0962,46.489" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.69298744px" fill="none"/>
+   <path id="path3376" opacity="0.98000004" fill="#000" d="m299.42,416.93a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-2" opacity="0.98000004" fill="#000" d="m353.92,415.85a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-4" opacity="0.98000004" fill="#000" d="m418.9,415.85a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-6" opacity="0.98000004" fill="#000" d="m473.41,415.85a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-8" opacity="0.98000004" fill="#000" d="m534.2,415.85a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-5" opacity="0.98000004" fill="#000" d="m586.6,418.02a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-66" opacity="0.98000004" fill="#000" d="m636.91,418.02a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-89" opacity="0.98000004" fill="#000" d="m693.51,418.02a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-60" opacity="0.98000004" fill="#000" d="m745.92,418.02a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-87" opacity="0.98000004" fill="#000" d="m796.23,415.85a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-0" opacity="0.98000004" fill="#000" d="m846.54,418.02a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-55" opacity="0.98000004" fill="#000" d="m896.85,415.85a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-3" opacity="0.98000004" fill="#000" d="m949.26,413.67a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-68" opacity="0.98000004" fill="#000" d="m1005.9,415.85a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-53" opacity="0.98000004" fill="#000" d="m1064.6,413.67a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-7" opacity="0.98000004" fill="#000" d="m1119.1,413.67a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-22" opacity="0.98000004" fill="#000" d="m1177.7,413.67a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3376-23" opacity="0.98000004" fill="#000" d="m1236.4,411.49a6.289,3.2686,0,1,1,-12.578,0,6.289,3.2686,0,1,1,12.578,0z"/>
+   <path id="path3585" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m259.6,407.89c6.1627-17.112-1.0709,6.2901,4.1419-24.329,321.4-4.0675,666.89-0.96124,983.71-9.1233" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.77455473px" fill="none"/>
+   <path id="path3587" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m1249,372.27c-2.2647,7.4385,0,2.3762,0,21.79" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.51125205px" fill="none"/>
+   <path id="path3739" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m368.06,386.17c-4.5764-31.854-17.103-117.01-18.982-132.12,22.382-13.467,45.531-3.0505,71.71-4.8045,7.2123,41.725,18.462,105.14,23.201,132.12" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.59161878px" fill="none"/>
+   <path id="path3747" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m356.38,250.5c-2.8854-14.961-8.0869-29.663-8.6564-44.882,13.948-11.682,33.145-4.2697,49.773-6.4117,10.543,16.457,8.478,40.19,10.82,51.294" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.52072644px" fill="#4d4d4d"/>
+   <path id="path3739-0" opacity="0.7" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m576.99,382.62c-4.58-31.85-17.1-117.01-18.98-132.12,22.382-13.467,45.531-3.0505,71.71-4.8045,7.2123,41.725,18.462,105.14,23.201,132.12" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.59161878px" fill="#ffcc2a"/>
+   <path id="path3739-2" opacity="0.7" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m786.61,382.62c-4.57-31.85-17.1-117.01-18.98-132.12,22.382-13.467,45.531-3.0505,71.708-4.8045,7.2123,41.725,18.462,105.14,23.201,132.12" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.59161878px" fill="#ffcc2a"/>
+   <path id="path3739-3" opacity="0.7" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m979.47,379.54c-4.5764-31.854-17.103-117.01-18.982-132.12,22.382-13.467,45.531-3.0505,71.71-4.8045,7.2123,41.725,18.462,105.14,23.201,132.12" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.59161878px" fill="#ffcc2a"/>
+   <path id="path3747-9" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m567.06,245.2c-2.8854-14.961-8.0869-29.663-8.6564-44.882,13.948-11.682,33.145-4.2697,49.773-6.4117,10.543,16.457,8.478,40.19,10.82,51.294" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.52072644px" fill="#4d4d4d"/>
+   <path id="path3747-3" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m777.54,245.2c-2.8854-14.961-8.0869-29.663-8.6564-44.882,13.948-11.682,33.145-4.2697,49.773-6.4117,10.543,16.457,8.478,40.19,10.82,51.294" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.52072644px" fill="#4d4d4d"/>
+   <path id="path3747-1" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m969.54,242.12c-2.8854-14.961-8.0869-29.663-8.6564-44.882,13.948-11.682,33.145-4.2697,49.773-6.4117,10.543,16.457,8.478,40.19,10.82,51.294" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.52072644px" fill="#333"/>
+   <path id="path3821" opacity="0.7" fill="#ffcc2a" d="m368.51,375.21c-0.63776-3.2958-4.4863-29.526-8.5522-58.288-4.0659-28.764-7.8543-54.388-8.4184-56.945-1.7817-8.072,8.6172-10.693,39.689-10.003,14.922,0.33146,27.336,0.82174,27.587,1.0895,0.2497,0.26777,5.5608,29.659,11.802,65.313l11.348,64.826h-72.297l-1.1596-5.9923z"/>
+   <path id="path3823" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m22.704,374.44c6.3444,3.7053,29.649,42.56,44.021,63.191" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.51125205px" fill="none"/>
+   <path id="path3827" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m24.766,372.41c-7.896-3.3176-12.971,12.311-25.016,23.745,6.8763-0.0248,13.342,3.166,20.014,4.7489-4.4732,6.7681-1.6686,14.254-2.5016,21.371,8.7157-15.315,13.857-23.016,20.014-33.243" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.72337532px" fill="#F00"/>
+   <path id="path3829" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m222,60.823c15.81,107.77,44.47,224.47,62.58,317.82" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.82073689px" fill="none"/>
+   <path id="path3831" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m232.37,115.19c42.334,87.66,95.014,194.99,127.77,263.57" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.60999322px" fill="none"/>
+   <path id="path3833" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m247.02,206.68c35.812,63.182,89.362,136.81,115.26,176.47" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.54400504px" fill="none"/>
+   <path id="path3837" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="M230.24,117.3c-29.88,83.94-90.57,220.49-134.18,322.52" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.48481619px" fill="none"/>
+   <path id="path3839" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="M226.04,97.044c309.56,46.656,748.24,30.906,1075.4-2.199l77.562,329.71" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.51785529px" fill="none"/>
+   <path id="path3845" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m1297.2,95.529c-18.588,60.607-67.029,209.73-88.047,272.38" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.51125205px" fill="none"/>
+   <path id="path3851" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m1316.1,171.77c-32.818,66-83.289,153.16-109.05,200.52" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.46587753px" fill="none"/>
+   <path id="path3867" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m1299.3,93.35c-3.098,1.3467-5.8105-22.62-8.3897-32.685" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.51125205px" fill="none"/>
+   <path id="path3871" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m1288.8,60.665c1.7882-3.6461-30.093,2.8437-46.118,4.358,5.9816,1.883,11.18,5.8106,16.77,8.7161-10.547,4.6577-9.1541,11.101-12.578,15.253,14.668-2.7899,35.77-7.0822,44.021-8.7161" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.51125205px" fill="#F00"/>
+   <path id="path3885" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" d="m221.85,62.844c-2.7742-6.9778-30.206,7.4758-44.021,10.895,9.1443,3.3392,9.42,2.448,16.77,4.358-0.34706,6.4234-8.5104,14.154-10.481,17.433,14.792,5.1362,33.548-11.624,37.733-13.074" stroke-dashoffset="0" stroke="#000" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.51125205px" fill="#F00"/>
+  </g>
+ </g>
+</svg>
+
+    <div id="lower1">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="31.js"></script>
+    </div>
+    <div id="middle1">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="21.js"></script>
+    </div>
+    <div id="upper1">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="11.js"></script>
+    </div>
+    <div id="lower0">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="30.js"></script>
+    </div>
+    <div id="middle0">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="20.js"></script>
+    </div>
+    <div id="upper0">
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="10.js"></script>
+    </div>
+    <h1 id="class1">1</h1>
+    <h1 id="class2">2</h1>
+    <h1 id="class3">3</h1>
+  </div>
+    
+    <div id="filter">
+        <h2>Age:</h2>
+        <input type="text" id="age" data-slider="true" data-slider-range="0,80" data-slider-step="5">
+        <br>
+
+        <form action="">
+        <h2>Gender:</h2>
+        <input type="radio" name="sex" value="0" checked>All
+        <input type="radio" name="sex" value="1">Male
+        <input type="radio" name="sex" value="2">Female
+        </form>
+    </div>
+
+</body>
+</html>
