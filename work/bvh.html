@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Timeless   
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20110825
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Ruonan Zhang</title>
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#">Ruonan Zhang </a></h1>
+			</div>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="../aboutme.html">AboutMe</a>
+
+			</li>
+			<li><a href="../work.html">Work ➹</a>
+				<ul>
+					<li><a href="../programming.html">Programming</a></li>
+					<li><a href="../design.html">Game</a></li>
+					<li><a href="../statistics.html">InfoScience</a></li>
+					<li><a href="../others.html">Others</a></li>
+				</ul>
+			</li>
+			<li><a href="../contact.html">Contact</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<h2 class="title">Improving performance of BVH construction</h2>
+						<p class="meta"></p>
+						<div class="entry">
+							<br/>
+							<p>
+								In our final project, we extend the previous physically-based renderer assignment, and construct a fully parallel BVH to improve performance of BVH construction. 
+
+								<p>1. We first implement the algorithm(tThinking Parallel, Part III: Tree Construction on the GPU) to generate BVH based on Morton code. We assign Morton code to each primitive and construct the hierarchy according to differs between the Morton codes. This method is implemented on CPU as a benchmark.</p>
+
+								<p>2. We then construct the binary radix tree(BRT) according to the algorithm(Maximizing Parallelism in the Construction of BVHs, Octrees, and k-d Trees, and Fast Parallel Construction of High Quality Bounding Volume Hierachies) and implement the fully parallel hierarchy generation.This method is implemented on GPU.Based on the BRT we constructed, we use a bottom-up traversal method mentioned in the paper to construct the BVHs on GPU. And finally copy the structure to CPU for further use.</p>
+							</p>
+							<h3>Results</h3>
+							<p>Construct BVH on CPU and GPU with cow.dea</p>
+							<img class = "other" src = "../images/cowGPU.png"/>
+							<img class = "other" src = "../images/cowCPU.png"/>
+							<p><h4>cow.dae</h4>
+								<p>
+								<h5>GPU</h5>
+								[PathTracer] Collecting primitives... Done! (0.0008 sec)
+								<br/>
+								[PathTracer] Building BVH... Done! (0.0053 sec)
+								</p>
+								<p>
+								<h5>CPU</h5>
+								[PathTracer] Collecting primitives... Done! (0.0004 sec)
+								<br/>
+								[PathTracer] Building BVH... Done! (0.1020 sec)
+								</p>
+							</p>
+							<br/>
+							<p>Construct BVH on CPU and GPU with dragon.dae</p>
+							<img class = "other" src = "../images/dragonGPU.png"/>
+							<img class = "other" src = "../images/dragonCPU.png"/>
+							<p>
+								<h4>dragon.dae</h4>
+								<p>
+								<h5>GPU</h5>
+								[PathTracer] Collecting primitives... Done! (0.0162 sec)
+								<br/>
+								[PathTracer] Building BVH... Done! (0.0855 sec)
+								</p>
+								<p>
+								<h5>CPU</h5>
+								[PathTracer] Collecting primitives... Done! (0.0171 sec)
+								<br/>
+								[PathTracer] Building BVH... Done! (5.2194 sec)
+								</p>
+							</p>
+						</div>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+</div>
+<div style="clear: both;">&nbsp;</div>
+<!-- end #footer -->
+</body>
+</html>

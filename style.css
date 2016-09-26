@@ -288,7 +288,7 @@ img.aligncenter {
 	width: 15px;
 }
 
-.gomoku, .rsales, .ppwp, .rcenter, .cn3, .map{
+.gomoku, .rsales, .ppwp, .rcenter, .cn3, .map, .r4, .r3, .r2, .r1{
 	width: 850px;
 }
 
@@ -300,12 +300,25 @@ img.aligncenter {
 	width: 180px;
 }
 
-.ppwpapp{
+.ppwpapp, .r5{
 	width: 220px;
 }
 
-.dm, .game{
+.dm, .game,{
 	width: 450px;
+}
+
+.r5_1{
+	width: 400px;
+	text-align: center;
+}
+
+.r4_1, .r3_1{
+	width: 280px;
+}
+
+.r4_2{
+	width: 80px;
 }
 
 .input{

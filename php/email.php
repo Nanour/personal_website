@@ -11,7 +11,7 @@ function sendemail(){
   $email = $_GET["sendtoemail"];
   $temp = $_GET["sendtomessage"];
   $message = "Name:".$name." Email:".$email." Message:".$temp;
-  $to = "ruz19@pitt.edu";
+  $to = "ruonanz131@gmail.com";
   $subject = "Personal Website";
   $headers = "Personal Website";
   mail($to, $subject, $message, $headers);
